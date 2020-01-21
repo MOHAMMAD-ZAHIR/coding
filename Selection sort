@@ -1,0 +1,29 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+    int i,j,size;
+    cout<<"Enter the size of an array : ";
+    cin>>size;
+    int num[size];
+    cout<<endl<<"Enter the numbers of an array : ";
+    for(i=1;i<=size;i++)
+    {
+        cin>>num[i];
+    }
+    for(i=1;i<=size;i++)
+    {
+        for(j=i+1;j<=size;j++)
+        {
+            if(num[i]>num[j])
+                swap(num[i],num[j]);
+        }
+    }
+    for(i=1;i<=size;i++)
+    {
+        cout<<num[i];
+    }
+
+    return 0;
+}
